@@ -9,7 +9,11 @@ def server(log_buffer=sys.stderr):
     print >>log_buffer, "making a server on {0}:{1}".format(*address)
     sock.bind(address)
     sock.listen(1)
-    
+
+    def response_ok():
+        resp.[]
+        resp.append("HTTP/1.1 200 OK')
+
     try:
         while True:
             print >>log_buffer, 'waiting for a connection'
@@ -17,9 +21,10 @@ def server(log_buffer=sys.stderr):
             try:
                 print >>log_buffer, 'connection - {0}:{1}'.format(*addr)
                 while True:
-                    data = conn.recv(16)
+                    data = conn.recv(1024)
                     print >>log_buffer, 'received "{0}"'.format(data)
-                    if data:
+                    if len(data) > 1024:
+
                         msg = 'sending data back to client'
                         print >>log_buffer, msg
                         conn.sendall(data)

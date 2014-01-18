@@ -1,21 +1,14 @@
 import socket
 import sys
-import mimetypes
 
 
-def response_ok(*args):
+def response_ok():
     """returns a basic HTTP response"""
-    if not args:
-        body = "this is a pretty minimal response"
-        mimetype = "text/plain"
-    else:
-        body = args[0]
-        mimetype = args[1]
     resp = []
     resp.append("HTTP/1.1 200 OK")
-    resp.append("Content-Type:" + mimetype)
+    resp.append("Content-Type: text/plain")
     resp.append("")
-    resp.append(body)
+    resp.append("this is a pretty minimal response")
     return "\r\n".join(resp)
 
 
@@ -36,7 +29,6 @@ def parse_request(request):
     return uri
 
 def resolve_uri(uri):
-    mime_res = (mimetypes.guess_type(uri))[0]
 
 
 def server():
