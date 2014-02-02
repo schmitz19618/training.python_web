@@ -20,6 +20,7 @@ def fetch_search_results(
 
 
 def parse_source(html, encoding='utf-8'):
+    html = open('craigslist_results.html', 'r')
     parsed = BeautifulSoup(html, from_encoding=encoding)
     return parsed
 
@@ -82,11 +83,20 @@ def add_walkscore(listing):
 
 
 if __name__ == '__main__':
-    html, encoding = fetch_search_results(
-        minAsk=500, maxAsk=1000, bedrooms=2
-    )
+
+    # html, encoding = fetch_search_results(
+    #    minAsk=500, maxAsk=1000, bedrooms=2
+    #)
+    html = ''
+    encoding = 'utf-8'
+
     doc = parse_source(html, encoding)
-    for listing in extract_listings(doc):
-        listing = add_address(listing)
-        listing = add_walkscore(listing)
-        pprint.pprint(listing)
+    listings = extract_listings(doc)
+
+    #for listings in listings
+    print listings
+    #for listing in extract_listings(doc):
+    #    listing = add_address(listing)
+    #    listing = add_walkscore(listing)
+    #    pprint.pprint(listing)
+    print doc.prettify()

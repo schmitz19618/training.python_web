@@ -1,0 +1,8 @@
+status: 200
+content-length: 161
+content-location: http://api.eventful.com/json//events/search?q=cycling&l=WA&app_key=test_key
+server: lighttpd/1.4.28
+date: Tue, 28 Jan 2014 17:58:01 GMT
+content-type: text/javascript; charset=utf-8
+
+{"last_item":null,"total_items":"0","first_item":null,"page_number":"1","page_size":"10","page_items":null,"search_time":"0.018","page_count":"0","events":null}

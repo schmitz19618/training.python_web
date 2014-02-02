@@ -3,7 +3,7 @@ import sys
 import mimetypes
 
 
-def response_ok(*args):
+def response_ok(body, mimetyp):
     """returns a basic HTTP response"""
     if not args:
         body = "this is a pretty minimal response"
