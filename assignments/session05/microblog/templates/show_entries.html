@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
+  {% if session.logged_in %}
   <form action="{{ url_for('add_entry') }}" method="POST" class="add_entry">
     <div class="field">
       <label for="title">Title</label>
@@ -13,6 +14,7 @@
       <input type="submit" value="Share" name="Share"/>
     </div>
   </form>
+  {% endif %}
   <h2>Posts</h2>
   <ul class="entries">
   {% for entry in entries %}
