@@ -96,6 +96,7 @@ class MicroblogTestCase(unittest.TestCase):
         assert 'You were logged out' in response.data
         # verify that incorrect credentials get a proper message
         response = self.login('notadmin', 'secret')
+        #import pdb;pdb.set_trace()
         assert 'Invalid Login' in response.data
         response = self.login('admin', 'notsosecret')
         assert 'Invalid Login' in response.data
