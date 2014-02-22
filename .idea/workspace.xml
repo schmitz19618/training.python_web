@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="264e4473-3e19-4683-82cb-f60e0abbd42e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/session07/mysite/mysite.db" afterPath="$PROJECT_DIR$/assignments/session07/mysite/mysite.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/session07/mysite/myblog/admin.py" afterPath="$PROJECT_DIR$/assignments/session07/mysite/myblog/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/session07/mysite/myblog/models.py" afterPath="$PROJECT_DIR$/assignments/session07/mysite/myblog/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="training.python_web.iws" />
@@ -869,7 +866,11 @@
       <created>1392952139382</created>
       <updated>1392952139382</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/UWPCE-PythonCert/training.python_web&#10;&#10;Conflicts:&#10;&#9;resources/session04/wsgi/bookapp.py&#10;">
+      <created>1393092633097</created>
+      <updated>1393092633097</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
