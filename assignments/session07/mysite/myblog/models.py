@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib import admin
 
 
+
 class Post(models.Model):
     title = models.CharField(max_length=128)
     text = models.TextField(blank=True)
@@ -40,7 +41,7 @@ class CategoryInline(admin.TabularInline):
 
 class PostAdmin(admin.ModelAdmin):
 
-    list_display = ('title', 'author', 'created_date', )
+    list_display = ('title', 'author', 'created_date', 'modified_date', )
     inlines = [CategoryInline, ]
 
     def __unicode__(self):
