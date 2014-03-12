@@ -75,7 +75,7 @@ each work on your own laptop and still share the changes you make.
     .. code-block:: bash
         :class: small
 
-        $ git remote add upstream https://github.com/<partner>/django-microblog.git
+        $ git remote add upstream https://github.com/gary-pei/django-microblog.git
         or
         $ git remote add upstream git@github.com:<partner>/django-microblog.git
 

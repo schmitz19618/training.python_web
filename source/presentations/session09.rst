@@ -1298,13 +1298,13 @@ Open ``views.py`` again.  Add the following:
 .. code-block:: python
     :class: small
     
-    from pyramid.httpexceptions import HTTPFound
-    from pyramid.view import view_config # <- ALREADY THERE
-    
-    @view_config(context='.models.Wiki')
-    def view_wiki(context, request):
-        return HTTPFound(location=request.resource_url(context,
-                                                       'FrontPage'))
+from pyramid.httpexceptions import HTTPFound
+from pyramid.view import view_config # <- ALREADY THERE
+
+@view_config(context='.models.Wiki')
+def view_wiki(context, request):
+    return HTTPFound(location=request.resource_url(context,
+                                                   'FrontPage'))
 
 .. container:: incremental
 
